@@ -1,3 +1,4 @@
+var PORT = process.env.PORT || 3000;
 const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -21,4 +22,4 @@ app.use((request, response, next) => {
     response.status(404).render('404', {pageTitle: 'Page Not Found', path: '/404'});
 })
 
-app.listen(3000); // First arg is port #
+app.listen(PORT); // First arg is port #
